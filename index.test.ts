@@ -2,7 +2,8 @@ import { enjs, jam } from '@urbit/nockjs';
 import { Clack, newtDecode, newtEncode, Thread } from './index'
 import 'dotenv/config'
 
-const desk = `%js-created-${Date.now().toString().substring(0, 3)}`;
+const strDate = Date.now().toString(16);
+const desk = `%js-created-${strDate.substring(strDate.length - 4)}`;
 const ship = process.env.SHIP_DIRECTORY || 'zod';
 test('createDesk', async function () {
 	const clack = Clack({ ship })
@@ -12,13 +13,13 @@ test('createDesk', async function () {
 
 test('mountDesk', async function () {
 	const clack = Clack({ ship })
-	const noun = await clack.mountDesk('%js-created')
+	const noun = await clack.mountDesk(desk)
   expect(enjs.cord(noun)).toBe('success');
 });
 
 test('commitDesk', async function () {
 	const clack = Clack({ ship })
-	const noun = await clack.commitDesk('%js-created')
+	const noun = await clack.commitDesk(desk)
   expect(enjs.cord(noun)).toBe('success');
 });
 
