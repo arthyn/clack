@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/archetype-org/clack#readme",
   "dependencies": {
-    "@urbit/nockjs": "^1.4.0-dev2",
+    "@urbit/nockjs": "^1.4.0-dev4",
     "dotenv": "^16.4.5",
     "pythonia": "^1.2.1"
   },
