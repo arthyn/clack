@@ -20,14 +20,12 @@
   },
   "homepage": "https://github.com/archetype-org/clack#readme",
   "dependencies": {
-    "@urbit/nockjs": "^1.4.0-dev4",
-    "dotenv": "^16.4.5",
-    "pythonia": "^1.2.1"
+    "@urbit/nockjs": "^1.4.0-dev4"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.14.10",
+    "dotenv": "^16.4.5",
     "dts-cli": "^2.0.5",
     "jest": "^29.7.0",
     "typescript": "^5.5.3"

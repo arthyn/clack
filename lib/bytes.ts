@@ -9,7 +9,7 @@ function newtDecode (buffer: Buffer): Noun {
   return cue_bytes(new DataView(uint8arr.buffer));
 }
 
-// Noun => Buffer
+// Noun (Atom) => Buffer
 function newtEncode (jammedNoun: Atom): Buffer {
   if (!(jammedNoun instanceof Atom)) {
     throw new Error(`${jammedNoun} is not a Noun`)

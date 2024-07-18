@@ -62,6 +62,7 @@ function parseThreadResponse (data: Buffer): Noun | null {
 
   const { mark, node } = result;
   if (mark === 'avow') {
+    // %.n in the "each" type
     if ('\x01' in node) {
       const { mark: innerMark, node: innerNode } = node['\x01'];
       if (innerMark === 'thread-fail') {
@@ -69,6 +70,7 @@ function parseThreadResponse (data: Buffer): Noun | null {
       }
     }
 
+    // %.y in the "each" type
     if ('\x00' in node) {
       const { mark: innerMark, node: innerNode } = node['\x00'];
       if (innerMark === 'noun') {
