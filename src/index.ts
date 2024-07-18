@@ -1,6 +1,6 @@
 import { dwim } from '@urbit/nockjs';
-import { newtEncode, newtDecode } from './lib/bytes'
-import { Fyrd, Thread, parseThreadResponse, sendKahn } from './lib/khan'
+import { newtEncode, newtDecode } from './bytes'
+import { Fyrd, Thread, parseThreadResponse, sendKahn } from './khan'
 
 interface ClackParams {
   ship: string;

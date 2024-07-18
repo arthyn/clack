@@ -18,7 +18,7 @@
       "*": ["./node_modules/@types/*", "*"]
     }
   },
-  "include": ["lib", "index.ts"],
+  "include": ["lib", "src/index.ts", "src/bytes.ts", "src/khan.ts"],
   "exclude": ["node_modules"],
   "ts-node": {
     "esm": true
